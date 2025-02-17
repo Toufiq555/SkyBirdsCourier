@@ -1,0 +1,910 @@
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the entire page */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    overflow-x: hidden;
+}
+
+
+.banner-container {
+    background-color: white; /* Sets the background color of the banner */
+    text-align: center; /* Centers the text inside the banner */
+    padding: 10px 0; /* Adds padding to the top and bottom of the banner */
+    overflow: hidden; /* Ensures text doesn't overflow */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  .sliding-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .sliding-banner p {
+    font-weight: bold;
+    margin: 0; /* Removes default margin */
+    font-size: 18px; /* Sets font size of the banner text */
+    color: rgb(0, 0, 0); /* Sets the text color */
+    animation: slide-text 18s linear infinite; /* Animates the text sliding from right to left */
+    white-space: nowrap; /* Prevents wrapping */
+  }
+  
+  @keyframes slide-text {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .banner-container{
+
+        margin-right: 15px;
+    }
+    .sliding-banner p {
+        
+        font-size: 16px; /* Adjusts font size for smaller screens */
+        animation-duration: 12s; /* Speeds up animation for smaller screens */
+    }
+  }
+  @media (max-width: 480px) {
+    .sliding-banner p {
+        font-size: 16px; /* Adjusts font size for smaller screens */
+        animation-duration: 12s; /* Speeds up animation for smaller screens */
+    }
+  }
+
+/* Header Container */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    position: relative;
+    overflow: visible;
+}
+
+/* Background with diagonal split */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color:#ADD8E6; /* Grey color for navbar side */
+    transform: skewX(-50deg);
+    transform-origin: top left;
+    z-index: -1;
+}
+
+/* Logo Side */
+.logo {
+    padding-left: 50px;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 250%;
+}
+
+.logo img {
+    height: 100px; /* Adjust logo size */
+}
+
+/* Navbar Side */
+.navbar-container {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 130px;
+   
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+   
+   
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(8, 8, 10);
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+    .header::before {
+        display: none; /* Remove diagonal split on small screens */
+    }
+    .navbar-container {
+        display: none;
+        width: 90%;
+        justify-content: center;
+        padding: 15px;
+        margin-right: 40px;
+    }
+  
+    .logo img{
+      width: 70%;
+      padding: 20px;
+      margin-left: -30px;
+     
+    }
+  
+  /*
+  
+    .navbar {
+        flex-direction: column;
+    }
+  
+    .services-page {
+        flex-direction: column;
+        align-items: center;
+       
+       
+    }
+    .dropdown-content.show{
+        width: 230%;
+    }
+  
+    .dropdown-content {
+     
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+  }
+*/
+  
+
+  }
+    /* Dropdown menu */
+  .dropdown {
+    position: relative;
+}
+
+/* Button that opens the dropdown */
+.dropbtn {
+   
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+   
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(241, 236, 236);
+    width: 1000px; /* Set a specific width for the dropdown */
+    top: 90px;
+    right: -10px; 
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 999;
+   
+      
+    
+}
+
+
+/* Show the dropdown content when clicked */
+.dropdown-content.show {
+    display: block;
+  
+}
+
+/* Styling the columns inside the dropdown */
+.services-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between columns */
+}
+
+/* Styling each column */
+/* .services-column {
+    display: flex;
+    flex-direction: column;
+}   */
+
+/* Styling the list inside each column */
+.services-column h2{
+    text-align:center;
+    
+}
+
+.services-column ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 350px;
+    text-align:left;
+}
+
+/* Styling list items */
+.services-column li {
+    
+    width:250px;
+    line-height: 2;
+    padding: 3px 1px;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+   
+    
+    
+}
+
+/* Hover effect for the list items */
+.services-column li:hover {
+    
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* Main Content Section */
+.main-content {
+    padding: 0px; /* Adds padding around the content */
+}
+
+/* Section 1 Styling */
+.section-1 {
+    position: relative; /* Allows positioning of child elements */
+    height: 550px; /* Sets the height of this section */
+    display: flex; /* Uses Flexbox layout to center the content inside */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    overflow: hidden; /* Ensures content doesn't overflow outside the section */
+    background-color: white; /* Sets the background color of the section */
+    margin-bottom: 0px; /* Adds space below the section */
+  /*  filter: sepia(50%) hue-rotate(170deg) saturate(300%);  */
+}
+
+/* Container that holds the slider and content */
+.section-1-container {
+    display: flex; /* Uses Flexbox to align slider and content side by side */
+    justify-content: center; /* Centers the slider and content */
+    align-items: center; /* Centers the content vertically */
+    width: 95%; /* Ensures it takes up the full width */
+    height: 90%; /* Ensures it takes up the full height */
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+/* Slider Styles */
+.slider {
+    width: 100%; /* Ensures the slider takes up the full width */
+    height: 110%; /* Ensures the slider takes up the full height */
+    position: absolute; /* Positions the slider absolutely within its container */
+    overflow: hidden; /* Hides overflowed content from the slider */
+}
+
+/* Container for all slides */
+.slide-container {
+    display: flex; /* Uses Flexbox to display all slides side by side */
+    width: 100%; /* Sets the width to 300% so that we have room for 3 slides */
+    transition: transform 1s ease-in-out; /* Smooth transition effect when moving between slides */
+}
+
+/* Individual Slide */
+.slide {
+    width: 100%; /* Makes each slide take up the full width of the slider */
+    height: 650px; /* Sets the height of each slide */
+    position: relative; /* Allows positioning of content inside the slide */
+    display: none; /* Hides slides by default (only one will be visible at a time) */
+}
+
+.image {
+    width: 100%; /* Makes the image fill the entire slide */
+    height: 90%; /* Makes the image fill the entire slide */
+    object-fit: cover; /* Ensures the image covers the entire slide without distortion */
+   
+}
+
+/* Content Container (centered on each image) */
+.content-container {
+    position: absolute; /* Positions the content absolutely within the slide */
+    top: 50%; /* Moves the content vertically to the center */
+    left: 50%; /* Moves the content horizontally to the center */
+    transform: translate(-50%, -50%); /* Adjusts the position to perfectly center the content */
+    text-align: center; /* Centers the text horizontally */
+    color:black; /* Sets the text color to white */
+    background-color:rgba(255, 255, 255, 0.5); /* Adds a semi-transparent black background for readability */
+    padding: 20px; /* Adds padding around the content */
+    border-radius: 20px 20px 20px 20px;
+}
+
+.content-container::before {
+    content: ""; /* Pseudo-element doesn't need text content */
+    position: absolute;
+    top: 10px; /* Adds margin from the top of the container */
+    left: 10%; /* Align it to the left corner */
+    width: 20%; /* Full width of the container */
+    height: 6px; /* Height of the line */
+    background-color: #0d55d2; /* Color of the line */
+    border-top-left-radius: 0px; /* Optional: round the left corner of the line */
+}
+
+.content-container h2 {
+    font-size: 50px; /* Sets the font size of the heading */
+    margin: 10px 0; /* Adds margin above and below the heading */
+}
+
+.content-container p {
+    font-size: 20px; /* Sets the font size of the paragraph */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .section-1 {
+        height: auto; /* Adjusts height for small screens */
+        padding: 20px; /* Adds padding for better spacing */
+    }
+
+    .section-1-container {
+        flex-direction: column; /* Stacks elements vertically */
+        height: auto;
+        width: 100%;
+    }
+
+    .slider {
+        width: 100%;
+        height: auto; /* Allows dynamic height adjustment */
+        position: relative;
+    }
+
+    .slide {
+        height: 400px; /* Adjust slide height */
+    }
+
+    .image {
+        height: 100%; /* Adjusts image height */
+    }
+
+    .content-container {
+        width: 90%; /* Adjusts content width for better fit */
+        font-size: 16px; /* Scales text for readability */
+        padding: 15px;
+    }
+
+    .content-container h2 {
+        font-size: 30px; /* Reduces heading size */
+    }
+
+    .content-container p {
+        font-size: 16px; /* Adjusts paragraph text */
+    }
+
+    .content-container::before {
+        width: 30%; /* Adjusts the top line width */
+        left: 35%;
+    }
+}
+
+
+
+/* Gallery Container */
+.gallery h2{
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+
+.gallery--items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  /* Gallery Item */
+  .gallery--item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Image Styling */
+  .gallery--img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery--img:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay Effect */
+  .gallery--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .gallery--item:hover .gallery--overlay {
+    opacity: 1;
+  }
+  
+  /* Button Style */
+  .btn {
+    background: #ff6600;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #cc5200;
+  }
+ 
+  /* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .gallery h2 {
+        font-size: 20px; /* Reduce font size for better readability */
+        margin-top: 20px;
+    }
+
+    .gallery--items {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid columns */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery--item {
+        border-radius: 5px; /* Reduce border radius for compact display */
+    }
+
+    .gallery--overlay {
+        font-size: 14px; /* Scale down overlay text */
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 6px 12px; /* Adjust button size */
+        font-size: 14px;
+    }
+}
+
+
+  
+
+  
+/* Our Services Section */
+.our-services-section2 {
+    text-align: center;
+    background:white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.services-content-section2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Left - Image Container */
+.image-container-section2 {
+    flex: 1;
+    justify-content: space-between;
+    min-width: 400px;
+     height: 300px;
+}
+
+.image-container-section2 img {
+    width: 60%;
+    height: 120%;
+    border-radius: 10px;
+  
+    
+}
+
+/* Right - Content Container */
+.content-container-section2 {
+    flex: 1;
+    min-width: 100px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-container-section2 h2 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.content-container-section2 input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.content-container-section2 .example-text-section2 {
+    font-size: 14px;
+    color:#000000;
+    margin-bottom: 10px;
+}
+
+.content-container-section2 button {
+    background: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content-container-section2 button:hover {
+    background: #cc5200;
+}
+
+@media (max-width: 768px) {
+    .our-services-section2{
+        display:block;
+        background-color:white;
+       
+
+    }
+    .services-content-section2 {
+        flex-direction: column;
+       
+        background-color: white;
+    }
+
+    .content-container-section2{
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+}
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Top and Bottom Lines */
+.bottom-line {
+    height: 1px;
+    width: 90%;
+    background-color: white;
+    margin: 0 auto 20px;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures columns take full height */
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+/* Footer Columns */
+.column {
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 0px; /* Minimum height to prevent collapsing */
+}
+
+/* Vertical Line Fix */
+.footer-content::before,
+.footer-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white;
+}
+
+.footer-content::before {
+    left: 30%; /* 1st vertical divider */
+}
+
+.footer-content::after {
+    left: 70%; /* 2nd vertical divider */
+}
+
+/* Social Icons */
+.social-icons a {
+    color: white;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ADD8E6;
+}
+
+/* Regional Office Section */
+.regional-office {
+    text-align: center;
+    margin-top: 0.5%;
+}
+
+.regional-office h2 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+/* Pune & Delhi Division */
+.office-locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Vertical Line Between Pune & Delhi */
+.office-vertical-divider {
+    width: 2px;
+    height: 15px;
+    background-color: white;
+}
+
+/* Footer Bottom - Copyright & Web Design */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1260px;
+    margin: 0px auto 0;
+    padding-top: 5px;
+    border-top: 2px solid white;
+
+}
+
+/* Align Text */
+.copyright {
+    text-align: left;
+    flex: 1;
+}
+
+.web-design {
+    text-align: center;
+    flex: 1;
+    font-size: small;
+}
+.TP {
+text-align: right;
+flex: 1;
+}
+
+.web-design a {
+    color: #ADD8E6;
+    text-decoration: none;
+}
+
+.web-design a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-content::before,
+    .footer-content::after {
+        display: none;
+    }
+    .top-line, .bottom-line {
+        width: 90%;
+    }
+    .office-locations {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /* Align copyright & web design vertically on mobile */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .copyright, .web-design {
+        text-align: center;
+        flex: unset;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* Mobile Menu Button */
+ul {
+    list-style: none;
+    padding: 0;
+}
+/* Mobile Menu Button */
+.small-menu-toggle {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    z-index: 100;
+}
+
+.small-menu-btn {
+    font-size: 30px;
+    color:#ADD8E6;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile Navbar Content */
+.small-navbar-content {
+    display: none;
+    background-color:#ADD8E6;
+    width: 50%;
+    padding: 20px;
+    position: absolute; /* Adjust to absolute, no longer fixed */
+    top: 0px; /* Adjust top margin to make space from the top */
+    right: -60%; /* Initially off-screen */
+    height: auto; /* Allow content to adjust height */
+    max-height: 80vh; /* Limit the max height to 80% of viewport */
+    
+    border-radius: 10px;
+    z-index: 99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a better look */
+    transition: right 0.3s ease-in-out; /* Smooth sliding effect */
+}
+
+.small-navbar-content.show {
+    display: block;
+    right: 0; /* Slide menu into view */
+}
+
+.small-navbar-content .small-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 15px; /* Adjust spacing between menu items */
+    width: 100%; /* Ensure the navbar takes up full width */
+}
+
+
+
+/* Ensure that the whole services content aligns vertically */
+.small-services-page {
+    display: flex;
+    flex-direction: column; /* Stack the different service categories vertically */
+    gap: 20px; /* Space between each service category */
+}
+
+/* Dropdown Content */
+.small-dropdown-content {
+    display: none;
+    background-color:#ADD8E6;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: left; /* Align text to the left */
+    margin-left: 0; /* Ensure the dropdown is aligned to the left */
+    position: absolute; /* Keep it aligned with the button */
+    left: 0; /* Align to the left of the parent container */
+}
+
+.small-dropdown-content.show {
+    display: block;
+}
+
+/* Submenu Styling */
+.small-dropdown-submenu {
+    position: relative;
+}
+
+.small-submenu-btn {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    background-color:#ADD8E6;
+    border: none;
+    width: 90%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add hover effect */
+}
+
+.small-submenu-btn:hover {
+    background-color:#ADD8E6; /* Change background color on hover */
+}
+
+.small-submenu-content {
+    display: none;
+    background-color:#ADD8E6;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.small-submenu-content.show {
+    display: block;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .small-menu-toggle {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    .small-navbar-content {
+        display: none; /* Hide mobile menu initially */
+    }
+
+    .small-navbar-content.show {
+        display: block; /* Show the mobile menu when toggled */
+    }
+
+    .large-navbar-content {
+        display: none; /* Hide large menu on small screens */
+    }
+}
+

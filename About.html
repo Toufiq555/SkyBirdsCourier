@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    
+</head>
+<body>
+
+ 
+
+    <!-- Header Section with Navigation -->
+    <header class="header">
+        <!-- Left: Logo -->
+        <div class="logo">
+            <img src="w8ohs65q.png" alt="Logo">
+        </div>
+
+<!-- Mobile Menu Button (Hamburger Icon) -->
+<div class="small-menu-toggle">
+    <button class="small-menu-btn" onclick="toggleDropdownsmall()">☰</button> <!-- Hamburger Icon -->
+</div>
+
+
+        <!-- Right: Navigation Bar  for big screen -->
+        <div class="navbar-container">
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Services</a>
+                    <div class="dropdown-content">
+                        <div class="services-page">
+                            <div class="services-column">
+                                <h2>Domestic Services</h2>
+                                <ul class="ul-list">
+                                    <li >Train Cargo</li>
+                                    <li >Surface Cargo</li>
+                                    <li >Air Cargo</li>
+                                    <li >By Road Cargo</li>
+                                    <li>Documents by air</li>
+                                </ul>
+                            </div>
+                            <div class="services-column">
+                                <h2>International Services</h2>
+                                <ul class="ul-list">
+                               <li>International Documents</li> 
+                               <li>International AIR Parcel</li>
+                               <li>International parcel by Sea</li>
+                                <li> AIR Import</li>  
+                               <li> SEA Import</li>
+                               <li>Special package for students- University delivery</li>
+                                </ul>
+                            </div>
+                            <div class="services-column">
+                                <h2>Value Added Services</h2>
+                                <ul class="ul-list">
+                                   <li>TO PAY Service</li>
+                                   <li>DOD Service </li>
+                                   <li> Reverse Solution</li>
+                                   <li>Freight on value</li>
+                                   <li>Packing solution </li>
+                                   <li>Risk Coverage</li>
+                                   <li>Gift Delivery</li>
+                                   <li>By hand / Open delivery of delicate shipments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+
+ 
+<!-- Mobile Navbar Content -->
+<div class="small-navbar-content">
+    <ul class="small-navbar">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        
+        <!-- Services Dropdown -->
+        <li class="small-dropdown">
+            <a href="javascript:void(0)" class="small-dropbtn" onclick="toggleDropdownContent()">Services</a>
+            <div class="small-dropdown-content">
+                <!-- Services Categories with Submenus -->
+                <div class="small-services-page">
+                    <!-- Domestic Services -->
+                    <div class="small-dropdown-submenu">
+                        <a href="javascript:void(0)" class="small-submenu-btn" onclick="toggleSubmenu('small-domestic-mobile')">Domestic Services</a>
+                        <div class="small-submenu-content" id="small-domestic-mobile">
+                            <ul class="small-ul-list">
+                                <li>Train Cargo</li>
+                                <li>Surface Cargo</li>
+                                <li>Air Cargo</li>
+                                <li>By Road Cargo</li>
+                                <li>Documents by air</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- International Services -->
+                    <div class="small-dropdown-submenu">
+                        <a href="javascript:void(0)" class="small-submenu-btn" onclick="toggleSubmenu('small-international-mobile')">International Services</a>
+                        <div class="small-submenu-content" id="small-international-mobile">
+                            <ul class="small-ul-list">
+                                <li>International Documents</li>
+                                <li>International AIR Parcel</li>
+                                <li>International parcel by Sea</li>
+                                <li>AIR Import</li>
+                                <li>SEA Import</li>
+                                <li>Special package for students- University delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Value Added Services -->
+                    <div class="small-dropdown-submenu">
+                        <a href="javascript:void(0)" class="small-submenu-btn" onclick="toggleSubmenu('small-value-mobile')">Value Added Services</a>
+                        <div class="small-submenu-content" id="small-value-mobile">
+                            <ul class="small-ul-list">
+                                <li>TO PAY Service</li>
+                                <li>DOD Service</li>
+                                <li>Reverse Solution</li>
+                                <li>Freight on value</li>
+                                <li>Packing solution</li>
+                                <li>Risk Coverage</li>
+                                <li>Gift Delivery</li>
+                                <li>By hand / Open delivery of delicate shipments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+ </header>
+
+     <!-- Banner Section -->
+     <div class="banner-container">
+        <div class="sliding-banner">
+            <p>Fuel SurCharge Hiked by 25% w.e.f. 01/03/2017 Due to Recently Increased In Fuel Prices </p>
+        </div>
+    </div>
+
+    <div class="container1">
+        <img src="About1.webp" alt="About Us">
+     </div>
+ 
+   
+        <!-- New Container Above Big Container -->
+        <div class="row image-text-container">
+            <div class="col-md-6 image-column">
+                <img src="w8ohs65q.png" alt="Sky Birds Courier Logo" class="image">
+            </div>
+            <div class="col-md-6 content-column">
+                <h2>About-Sky Birds Courier</h2>
+                <p>
+                    Sky Birds Courier has grown and placed itself as an ultimate service provider in the Courier Industry with its expertise..<br>
+
+                    We have our presence with a strong network in the courier industry in Maharashtra.<br>
+
+                    We have a large delivery network covering close to 8,000 Pincodes giving its customers the best reach in the country. Its efficient international network spans over 200 global destinations. We have strategic alliances with world-class courier companies for movement of international shipments.<br>
+
+                    We provide services in a cost-effective manner with committed time frame as per customer requirements. We do not compromise with the quality of services and the safety of the consignments.<br>
+
+                    We manage same-day by-hand delivery for expensive & delicate shipments. We have dedicated direct & indirect workforce.
+                </p>
+            </div>
+        </div>
+
+        <!-- Row containing Big Container Section and Counter Section -->
+        <div class="row flex-container">
+            <!-- Counter Section (Two Rows, 2 Columns Each) -->
+            <div class="counter-section col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="counter--item">
+                            <div class="icon">
+                                <img src="icon-01.png" alt="Projects Done">
+                            </div>
+                            <div class="number h1">
+                                <p class="counter" data-counter="1200">0</p>
+                            </div>
+                            <div class="title">
+                                <p>Projects Delivered</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="counter--item">
+                            <div class="icon">
+                                <img src="icon-02.png" alt="Satisfied Clients">
+                            </div>
+                            <div class="number h1">
+                                <p class="counter" data-counter="1200">0</p>
+                            </div>
+                            <div class="title">
+                                <p>Satisfied Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="counter--item">
+                            <div class="icon">
+                                <img src="icon-03.webp" alt="Cities Served">
+                            </div>
+                            <div class="number h1">
+                                <p class="counter" data-counter="200">0</p>
+                            </div>
+                            <div class="title">
+                                <p>Cities Served</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="counter--item">
+                            <div class="icon">
+                                <img src="icon-04.png" alt="Awards Win">
+                            </div>
+                            <div class="number h1">
+                                <p class="counter" data-counter="107">0</p>
+                            </div>
+                            <div class="title">
+                                <p>Awards Win</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Big Container Section (beside the Counter Section) -->
+            <div class="col-md-4 big-container">
+                <h2>Our Achievements</h2>
+                <p>
+                    Sky Birds Courier has achieved significant milestones in the courier industry. With a vast network, committed workforce, and a dedication to customer satisfaction, we have become one of the leaders in the courier services sector.
+                </p>
+                <h3>Our Mission</h3>
+                <P>We provide services in a cost-effective manner with committed time frames as per customer requirements. We do not compromise with the quality of services and the safety of the consignments.
+                    We aim to drive progress and deliver solutions with efficiency, trust, and care.
+                </P>
+            </div>
+        </div>
+  
+
+        <div class="footer">
+            <div class="top-line"></div>  <!-- Top Line -->
+        
+            <div class="footer-content">
+                <div class="column">
+                    <h3>ADDRESS</h3>
+                    <p><ion-icon name="location-sharp"></ion-icon> 45, Graffikon Arcade,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opp. Jehangir Hospital <br>
+                        &nbsp;Dhole Patil Road <br>
+                        &nbsp;Pune - 411001</p>
+                </div>
+        
+                <div class="vertical-line"></div> <!-- Vertical Line -->
+        
+                <div class="column">
+                    <h3>CONTACT</h3>
+                    <p><ion-icon name="call-sharp"></ion-icon> +91 20 65235783</p>
+                    <p><ion-icon name="call-sharp"></ion-icon>+91 2040026565</p>
+                    <p><ion-icon name="mail-sharp"></ion-icon> 
+                        <a href="mailto:admin@skybirdscourier.com">admin@skybirdscourier.com</a>
+                    </p>
+                </div>
+        
+                <div class="vertical-line"></div> <!-- Vertical Line -->
+        
+                <div class="column social-icons">
+                    <h3>FOLLOW US</h3><p>
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </p>
+                </div>
+            </div>
+        
+            <div class="bottom-line"></div>  <!-- Bottom Line -->
+         <!-- Regional Offices Section -->
+         <div class="regional-office">
+            <h2>REGIONAL OFFICES</h2>
+            <div class="office-locations">
+                <p>Pune</p>
+                <div class="office-vertical-divider"></div> <!-- Vertical line between cities -->
+                <p>Delhi</p>
+            </div>
+        </div>
+        
+        <!-- Copyright & Web Design (Aligned in One Row) -->
+        <div class="footer-bottom">
+            <p class="copyright">© 2024 SKY BIRDS COURIER & CARGO. <br> All Rights Reserved.</p>
+            <p class="web-design">WebDesigned by <a href="#">FlairM Tecnology</a></p> 
+            <p class="TP">Terms of Use | Privacy Policy</p> 
+           
+        </div>
+        </div>
+        
+    <script>
+        // Function to animate the counters
+        window.onload = function() {
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-counter'));
+                let count = 551;
+                const speed = 0.1; // Speed of counting (milliseconds per increment)
+
+                function updateCounter() {
+                    if (count < target) {
+                        count++;
+                        counter.textContent = count;
+                        setTimeout(updateCounter, speed);
+                    } else {
+                        counter.textContent = target +"+"; // Ensure it shows the exact target number
+                    }
+                }
+
+                updateCounter();
+            });
+        };
+
+          // Toggle the dropdown menu
+          
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdownBtn = document.querySelector(".dropbtn");
+        const dropdownContent = document.querySelector(".dropdown-content");
+
+        dropdownBtn.addEventListener("click", function () {
+            dropdownContent.classList.toggle("show");
+        });
+
+        window.addEventListener("click", function (event) {
+            if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove("show");
+            }
+        });
+    });
+
+
+// Toggle the mobile menu visibility
+function toggleDropdownsmall() {
+    var dropdownContent = document.querySelector('.small-navbar-content');
+    dropdownContent.classList.toggle('show'); // Toggle visibility for the mobile menu
+}
+
+// Toggle the small dropdown content for "Services"
+function toggleDropdownContent() {
+    var dropdownContent = document.querySelector('.small-dropdown-content');
+    dropdownContent.classList.toggle('show'); // Toggle visibility for the small dropdown
+}
+
+// Toggle the visibility of submenus (Domestic, International, Value-added)
+function toggleSubmenu(id) {
+    var submenu = document.getElementById(id);
+    submenu.classList.toggle('show'); // Toggle visibility of submenus
+}
+
+// Close the mobile menu and dropdowns if clicked outside
+function closeMenusOnClickOutside(event) {
+    var dropdownContent = document.querySelector('.small-navbar-content');
+    var dropdownButton = document.querySelector('.small-menu-btn');
+    var submenuContents = document.querySelectorAll('.small-submenu-content');
+    var servicesDropdown = document.querySelector('.small-dropdown-content');
+
+    // Check if the click is outside the mobile menu, button, or submenus
+    if (!dropdownContent.contains(event.target) && !dropdownButton.contains(event.target)) {
+        dropdownContent.classList.remove('show');
+    }
+
+    // Close submenus when clicked outside
+    submenuContents.forEach(submenu => {
+        if (!submenu.contains(event.target)) {
+            submenu.classList.remove('show');
+        }
+    });
+
+    // Close services dropdown when clicked outside
+    if (servicesDropdown && !servicesDropdown.contains(event.target)) {
+        servicesDropdown.classList.remove('show');
+    }
+}
+
+// Attach event listener to detect clicks outside the menu
+document.addEventListener('click', closeMenusOnClickOutside);
+
+// Prevent the click event from propagating to the document when the menu itself is clicked
+document.querySelector('.small-navbar-content').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+
+</script>
+
+        
+    </script>
+</body>
+</html>
+
