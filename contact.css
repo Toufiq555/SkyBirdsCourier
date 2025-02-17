@@ -304,10 +304,11 @@ body {
   
   /* Individual contact info item */
   .contact-info--item {
-    flex: 1 1 23%; /* Flex settings to make the items responsive */
+    flex: 1 1 20%; /* Flex settings to make the items responsive */
     min-width: 280px; /* Prevent them from shrinking too much */
-    max-width: 10%; /* Limit to 4 items in a row */
+    max-width: 5%; /* Limit to 4 items in a row */
     padding: 50px;
+
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 3px 6Spx rgba(0, 0, 0, 0.1);
