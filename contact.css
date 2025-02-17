@@ -297,8 +297,9 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-between; /* Distribute items evenly */
-    width: 100%;
+    width: calc(100% - 40px); /* Subtract the margin from the container width */
     margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add margin on the left and right sides */
 }
 
 .contact-info--item {
