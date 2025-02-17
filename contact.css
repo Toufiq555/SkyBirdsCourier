@@ -297,16 +297,15 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-between; /* Distribute items evenly */
-    gap: 20px; /* Space between items */
     width: 100%;
     margin: 0 auto; /* Center the container */
 }
 
 .contact-info--item {
-    flex: 1 1 calc(25% - 20px); /* Ensure each item takes up about 25% of the container width, minus the gap */
-    min-width: 280px; /* Prevent items from becoming too small */
-    max-width: 280px; /* Limit max width of the items */
-    padding: 20px;
+    flex: 1 1 calc(25% - 0px); /* Each item will take 25% of the container width */
+    min-width: 220px; /* Make the items a bit smaller */
+    max-width: 220px; /* Limit the size of the items */
+    padding: 15px; /* Reduce padding for smaller size */
 
     background-color: #fff;
     border-radius: 8px;
@@ -317,13 +316,17 @@ body {
 /* For smaller screens */
 @media (max-width: 768px) {
     .contact-info--item {
-        flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
+        flex: 1 1 calc(50% - 0px); /* Two items per row on smaller screens */
+        min-width: 180px; /* Smaller size for smaller screens */
+        max-width: 180px;
     }
 }
 
 @media (max-width: 480px) {
     .contact-info--item {
-        flex: 1 1 calc(100% - 20px); /* One item per row on very small screens */
+        flex: 1 1 calc(100% - 0px); /* One item per row on very small screens */
+        min-width: 150px; /* Even smaller for very small screens */
+        max-width: 150px;
     }
 }
 
