@@ -1,7 +1,5 @@
 {
-  "build": {
-    "env": {
-      "NODE_VERSION": "18"
-    }
-  }
+  "redirects": [
+    { "source": "/", "destination": "/home.html", "statusCode": 301 }
+  ]
 }
