@@ -295,24 +295,23 @@ body {
   
   .contact-info-row {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap when necessary */
-    justify-content: space-between;
-    gap: 20px; /* Adds space between items */
-    margin: 0 auto; /* Center the container if necessary */
-    width: 100%; /* Ensure the row takes full width */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Distribute items evenly */
+    gap: 20px; /* Space between items */
+    width: 100%;
+    margin: 0 auto; /* Center the container */
 }
 
 .contact-info--item {
-    flex: 1 1 calc(25% - 20px); /* Makes sure the items take up 25% minus the gap */
-    min-width: 280px; /* Prevent shrinking too much */
-    max-width: 300px; /* Limit item width */
-    padding: 20px; /* Adjust padding as needed */
+    flex: 1 1 calc(25% - 20px); /* Ensure each item takes up about 25% of the container width, minus the gap */
+    min-width: 280px; /* Prevent items from becoming too small */
+    max-width: 280px; /* Limit max width of the items */
+    padding: 20px;
 
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Space between rows */
 }
 
 /* For smaller screens */
@@ -327,6 +326,7 @@ body {
         flex: 1 1 calc(100% - 20px); /* One item per row on very small screens */
     }
 }
+
 
 
   
