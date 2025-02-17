@@ -299,13 +299,13 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-between;
-    gap: 10px; /* Space between each item */
+    
   }
   
   /* Individual contact info item */
   .contact-info--item {
     flex: 1 1 23%; /* Flex settings to make the items responsive */
-    min-width: 240px; /* Prevent them from shrinking too much */
+    min-width: 280px; /* Prevent them from shrinking too much */
     max-width: 10%; /* Limit to 4 items in a row */
     padding: 50px;
     background-color: #fff;
