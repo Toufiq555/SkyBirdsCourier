@@ -298,6 +298,8 @@ body {
     flex-wrap: wrap; /* Allow items to wrap when necessary */
     justify-content: space-between;
     gap: 20px; /* Adds space between items */
+    margin: 0 auto; /* Center the container if necessary */
+    width: 100%; /* Ensure the row takes full width */
 }
 
 .contact-info--item {
@@ -310,9 +312,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Space between rows */
 }
 
-/* Ensure that smaller screens properly display items in a row */
+/* For smaller screens */
 @media (max-width: 768px) {
     .contact-info--item {
         flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
