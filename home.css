@@ -145,6 +145,7 @@ body {
         flex-direction: column;
         text-align: center;
         height: auto;
+        width: 403px;
     }
     .header::before {
         display: none; /* Remove diagonal split on small screens */
