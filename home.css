@@ -620,166 +620,103 @@ body {
 
 }
 /* Footer Styling */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    position: relative;
+/* Container Style */
+.container {
     width: 100%;
+    margin: 0 auto;
+    padding: 0 15px; /* Padding to prevent content from touching the edges */
 }
 
-/* Top and Bottom Lines */
-.bottom-line {
-    height: 1px;
-    width: 90%;
-    background-color: white;
-    margin: 0 auto 20px;
-}
-
-/* Footer Content */
-.footer-content {
+/* Row Style */
+.row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch; /* Ensures columns take full height */
-    max-width: 1000px;
-    margin: auto;
-    position: relative;
+   margin-bottom: 20px; /* Bottom margin for rows */
 }
 
-/* Footer Columns */
-.column {
-     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    min-height: 0px; /* Minimum height to prevent collapsing */
+/* Column Styles */
+.col-md-3 {
+    flex: 1 1 22%; /* Ensures each column takes up 22% of the row with flexibility */
+    min-width: 280px; /* Minimum width for each column */
+    padding: 15px;
 }
 
-/* Vertical Line Fix */
-.footer-content::before,
-.footer-content::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background-color: white;
+/* Header Styles in Footer and Sections */
+h3 {
+    font-size: 1.25rem;
+    color:black; /* White color for headings */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase headings for a cleaner look */
 }
 
-.footer-content::before {
-    left: 30%; /* 1st vertical divider */
+/* Text Muted and General Content Styling */
+.text-muted {
+    color: rgba(255, 255, 255, 0.6); /* Slightly faded text color */
+    line-height: 1.6; /* Makes text more readable */
 }
 
-.footer-content::after {
-    left: 70%; /* 2nd vertical divider */
-}
-
-/* Social Icons */
-.social-icons a {
-    color: white;
-    font-size: 22px;
-    margin: 0 10px;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: #ADD8E6;
-}
-
-/* Regional Office Section */
-.regional-office {
-    text-align: center;
-    margin-top: 0.5%;
-}
-
-.regional-office h2 {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
-
-/* Pune & Delhi Division */
-.office-locations {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-/* Vertical Line Between Pune & Delhi */
-.office-vertical-divider {
-    width: 2px;
-    height: 15px;
-    background-color: white;
-}
-
-/* Footer Bottom - Copyright & Web Design */
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1260px;
-    margin: 0px auto 0;
-    padding-top: 5px;
-    border-top: 2px solid white;
-
-}
-
-/* Align Text */
-.copyright {
-    text-align: left;
-    flex: 1;
-}
-
-.web-design {
-    text-align: center;
-    flex: 1;
-    font-size: small;
-}
-.TP {
-text-align: right;
-flex: 1;
-}
-
-.web-design a {
-    color: #ADD8E6;
+.text-muted a {
+    color:black;
     text-decoration: none;
 }
 
-.web-design a:hover {
-    text-decoration: underline;
+.text-muted a:hover {
+    color: #ff6600; /* Accent color on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .footer-content::before,
-    .footer-content::after {
-        display: none;
-    }
-    .top-line, .bottom-line {
-        width: 90%;
-    }
-    .office-locations {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    /* Align copyright & web design vertically on mobile */
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    .copyright, .web-design {
-        text-align: center;
-        flex: unset;
-        margin-bottom: 5px;
-    }
+/* Icon Styling */
+ion-icon {
+    font-size: 1.5rem;
+    color: #ff6600;
+    margin-right: 10px; /* Space between icon and text */
 }
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* White text */
+    padding: 20px 0;
+}
+
+footer .container {
+    padding: 0 15px; /* Padding for footer */
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Footer Columns */
+footer .col-md-4 {
+    flex: 1 1 30%; /* Ensures each column takes up 30% of the footer with flexibility */
+    text-align: center;
+}
+
+/* Copyright and Terms Text */
+footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #ff6600; /* Accent color for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff; /* White color on hover for better visibility */
+}
+
+/* Footer Icon Image */
+.col-md-3 img {
+    max-width: 100%; /* Makes sure the image doesn't exceed column width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
 
 
 /* Mobile Menu Button */

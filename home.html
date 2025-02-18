@@ -7,6 +7,7 @@
 
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     
@@ -261,61 +262,70 @@
     </div>
 </div>
 
-<!-- Footer -->
-<div class="footer">
-    <div class="top-line"></div>  <!-- Top Line -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Address</h3>
+            <p class="text-muted" >
+                45, Graffikon Arcade, <br>
+                Opp. Jehangir Hospital, <br> 
+                Dhole Patil Road, <br> Pune - 411001
 
-    <div class="footer-content">
-        <div class="column">
-            <h3>ADDRESS</h3>
-            <p><ion-icon name="location-sharp"></ion-icon> 45, Graffikon Arcade,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opp. Jehangir Hospital <br>
-                &nbsp;Dhole Patil Road <br>
-                &nbsp;Pune - 411001</p>
+            </p>
         </div>
 
-        <div class="vertical-line"></div> <!-- Vertical Line -->
-
-        <div class="column">
+        <div class="col-md-3">
             <h3>CONTACT</h3>
-            <p><ion-icon name="call-sharp"></ion-icon> +91 20 65235783</p>
-            <p><ion-icon name="call-sharp"></ion-icon>+91 2040026565</p>
-            <p><ion-icon name="mail-sharp"></ion-icon> 
-                <a href="mailto:admin@skybirdscourier.com">admin@skybirdscourier.com</a>
-            </p>
-        </div>
+            <p class="text-muted"><ion-icon name="call-sharp"></ion-icon> +91 20 65235783</p>
+            <p class="text-muted"><ion-icon name="call-sharp"></ion-icon>+91 2040026565</p>
+            <p class="text-muted"><ion-icon name="mail-sharp"></ion-icon> 
+                <a href="mailto:admin@skybirdscourier.com">admin@skybirdscourier.com</a> </p>
+         </div>
 
-        <div class="vertical-line"></div> <!-- Vertical Line -->
+         <div class="col-md-3">
+            <h3>Follow US</h3>
+            <P class="text-muted">
+                
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+             </P>
+         </div>
 
-        <div class="column social-icons">
-            <h3>FOLLOW US</h3><p>
-            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-            </p>
-        </div>
-    </div>
+         <div class="col-md-3">
+            <h3>REGIONAL OFFICES</h3>
+            <p class="text-muted">Pune | Delhi</p>
+         </div>
 
-    <div class="bottom-line"></div>  <!-- Bottom Line -->
- <!-- Regional Offices Section -->
- <div class="regional-office">
-    <h2>REGIONAL OFFICES</h2>
-    <div class="office-locations">
-        <p>Pune</p>
-        <div class="office-vertical-divider"></div> <!-- Vertical line between cities -->
-        <p>Delhi</p>
+         
     </div>
 </div>
 
-<!-- Copyright & Web Design (Aligned in One Row) -->
-<div class="footer-bottom">
-    <p class="copyright">© 2024 SKY BIRDS COURIER & CARGO. <br> All Rights Reserved.</p>
-    <p class="web-design">WebDesigned by <a href="#">FlairM Tecnology</a></p> 
-    <p class="TP">Terms of Use | Privacy Policy</p> 
-   
-</div>
-</div>
+<footer class="text-center bg-dark text-white py-3">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <p class="text-muted">
+                    Driven by <a href="https://www.flairm.com/index.html">FlairM Technologies</a>
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <p class="text-muted">
+                    &copy;2024 SKY BIRDS COURIER & CARGO. <br> All Rights Reserved.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <p class="text-muted">
+                    Terms of Use | Privacy Policy
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Script for Image Slider -->
     <script>
