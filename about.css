@@ -15,47 +15,59 @@ body {
     padding: 10px 0; /* Adds padding to the top and bottom of the banner */
     overflow: hidden; /* Ensures text doesn't overflow */
     white-space: nowrap; /* Prevents text from wrapping */
-}
-
-.sliding-banner {
+  }
+  
+  .sliding-banner {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     overflow: hidden;
-}
-
-.sliding-banner p {
+  }
+  
+  .sliding-banner p {
     font-weight: bold;
     margin: 0; /* Removes default margin */
     font-size: 18px; /* Sets font size of the banner text */
     color: rgb(0, 0, 0); /* Sets the text color */
     animation: slide-text 18s linear infinite; /* Animates the text sliding from right to left */
     white-space: nowrap; /* Prevents wrapping */
-}
-
-@keyframes slide-text {
+  }
+  
+  @keyframes slide-text {
     from {
         transform: translateX(100%);
     }
     to {
         transform: translateX(-100%);
     }
-}
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .banner-container{
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+        margin-right: 15px;
+    }
+    .sliding-banner p {
+        
+        font-size: 16px; /* Adjusts font size for smaller screens */
+        animation-duration: 12s; /* Speeds up animation for smaller screens */
+    }
+  }
+  @media (max-width: 480px) {
     .sliding-banner p {
         font-size: 16px; /* Adjusts font size for smaller screens */
         animation-duration: 12s; /* Speeds up animation for smaller screens */
     }
-}
+  }
+
 /* Header Container */
 .header {
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: space-between;
-    height: 150px;
+    height: 110px;
     position: relative;
     overflow: visible;
 }
@@ -67,7 +79,7 @@ body {
     top: 0;
     left: 50%;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-color:#ADD8E6; /* Grey color for navbar side */
     transform: skewX(-50deg);
     transform-origin: top left;
@@ -81,20 +93,25 @@ body {
     flex: 1;
     display: flex;
     align-items: center;
-    height: 145%;
+   
 }
 
 .logo img {
-    height: 100px; /* Adjust logo size */
+    position:relative;
+    height: 70px; /* Adjust logo size */
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
 /* Navbar Side */
 .navbar-container {
+    position: relative;
     flex: 2;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 130px;
+    margin-bottom: 20px;
    
 }
 
@@ -129,6 +146,7 @@ body {
         flex-direction: column;
         text-align: center;
         height: auto;
+        width: 365px;
     }
     .header::before {
         display: none; /* Remove diagonal split on small screens */
@@ -142,7 +160,8 @@ body {
     }
   
     .logo img{
-      width: 70%;
+        height: 60px;
+      width: 60%;
       padding: 20px;
       margin-left: -30px;
      
