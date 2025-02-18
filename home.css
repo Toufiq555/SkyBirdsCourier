@@ -546,7 +546,7 @@ body {
     justify-content: space-between;
     min-width: 200px;
      height: 300px;
-     background-color: #cc5200;
+     background-color:white;
 }
 
 .image-container-section2 img {
@@ -615,6 +615,7 @@ body {
     .content-container-section2{
         flex-direction: column;
         margin-right: 30px;
+        margin-left: 34px;
     }
 
 }
