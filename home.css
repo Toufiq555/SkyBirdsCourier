@@ -8,6 +8,7 @@ body {
 }
 
 
+
 .banner-container {
     background-color: white; /* Sets the background color of the banner */
     text-align: center; /* Centers the text inside the banner */
@@ -145,7 +146,7 @@ body {
         flex-direction: column;
         text-align: center;
         height: auto;
-        width: 403px;
+        width: 365px;
     }
     .header::before {
         display: none; /* Remove diagonal split on small screens */
@@ -543,8 +544,9 @@ body {
 .image-container-section2 {
     flex: 1;
     justify-content: space-between;
-    min-width: 400px;
+    min-width: 200px;
      height: 300px;
+     background-color: #cc5200;
 }
 
 .image-container-section2 img {
@@ -788,8 +790,8 @@ ul {
 .small-menu-toggle {
     display: none;
     position: absolute;
-    top: 40px;
-    right: 30px;
+    top: 35px;
+    right: -10px;
     z-index: 100;
 }
 
