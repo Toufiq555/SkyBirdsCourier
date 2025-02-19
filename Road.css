@@ -351,13 +351,14 @@ body {
 @media (max-width: 768px) {
     .roadcargo-image {
         width: 100%;
-        height: auto;
+        height: auto;margin-top: -70px;
     }
 
     .roadcargo-info {
         padding-left: 0;
         width: 100%;
         text-align: center;
+        margin-top: 45px;
     }
 
     .roadcargo-info h2, .roadcargo-info h3 {
@@ -550,9 +551,12 @@ ul {
 .small-navbar-content.show {
     right: 0; /* Slide it into view */
     height: 170px;
+    box-shadow: -6px 0 15px rgba(0, 0, 0, 0.3);
+
 }
 
 .small-navbar-content .small-navbar {
+   
     display: flex;
     flex-direction: column;
     align-items: center; /* Align items to the left */
@@ -561,7 +565,11 @@ ul {
 
 }
  .small-navbar-content ul li{
-    color: #ff6600;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+
 }
 
 
@@ -586,6 +594,9 @@ ul {
     margin-left: 0; /* Ensure the dropdown is aligned to the left */
     position: absolute; /* Keep it aligned with the button */
     left: 0; /* Align to the left of the parent container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+
 }
 
 .small-dropdown-content.show {
@@ -599,7 +610,8 @@ ul {
 
 .small-submenu-btn {
     font-size: 16px;
-    color: #333;
+    font-weight: 600;
+    color: #000000;
     cursor: pointer;
     padding: 10px;
     background-color:#ADD8E6;
@@ -608,6 +620,7 @@ ul {
     border-radius: 5px;
     transition: background-color 0.3s ease; /* Add hover effect */
 }
+
 
 .small-submenu-btn:hover {
     background-color:#ADD8E6; /* Change background color on hover */
@@ -626,9 +639,7 @@ ul {
 .small-submenu-content.show {
     display: block;
 }
-li{
-    color: #000;
-}
+
 
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
@@ -642,11 +653,15 @@ li{
 
     .small-navbar-content.show {
         display: block; /* Show the mobile menu when toggled */
+        margin-right: -25px;
+    
     }
 
     .large-navbar-content {
         display: none; /* Hide large menu on small screens */
     }
 }
+
+
 
 

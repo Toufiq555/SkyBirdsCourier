@@ -351,54 +351,60 @@
         });
     });
         
-// Toggle the mobile menu visibility
+// ✅ Toggle the main menu
 function toggleDropdownsmall() {
     var dropdownContent = document.querySelector('.small-navbar-content');
-    dropdownContent.classList.toggle('show'); // Toggle visibility for the mobile menu
+
+    dropdownContent.classList.toggle('show');
+
+    // Adjust position to make it scrollable
+    if (dropdownContent.classList.contains('show')) {
+        dropdownContent.style.position = "absolute";
+        dropdownContent.style.top = window.scrollY + "px";
+    }
 }
 
-// Toggle the small dropdown content for "Services"
+// ✅ Toggle the small "Services" dropdown
 function toggleDropdownContent() {
     var dropdownContent = document.querySelector('.small-dropdown-content');
-    dropdownContent.classList.toggle('show'); // Toggle visibility for the small dropdown
+    dropdownContent.classList.toggle('show');
 }
 
-// Toggle the visibility of submenus (Domestic, International, Value-added)
+// ✅ Toggle submenus (Domestic, International, Value-added)
 function toggleSubmenu(id) {
     var submenu = document.getElementById(id);
-    submenu.classList.toggle('show'); // Toggle visibility of submenus
+    submenu.classList.toggle('show');
 }
 
-// Close the mobile menu and dropdowns if clicked outside
-function closeMenusOnClickOutside(event) {
-    var dropdownContent = document.querySelector('.small-navbar-content');
-    var dropdownButton = document.querySelector('.small-menu-btn');
-    var submenuContents = document.querySelectorAll('.small-submenu-content');
+// ✅ Close menu & dropdowns when clicking outside
+document.addEventListener('click', function (event) {
+    var menu = document.querySelector('.small-navbar-content');
+    var menuButton = document.querySelector('.small-menu-btn');
     var servicesDropdown = document.querySelector('.small-dropdown-content');
 
-    // Check if the click is outside the mobile menu, button, or submenus
-    if (!dropdownContent.contains(event.target) && !dropdownButton.contains(event.target)) {
-        dropdownContent.classList.remove('show');
+    // Submenus list
+    var submenuContents = document.querySelectorAll('.small-submenu-content');
+
+    // Check if click is outside menu and button
+    if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+        menu.classList.remove('show'); // Hide main menu
     }
 
-    // Close submenus when clicked outside
+    // Close services dropdown
+    if (servicesDropdown && !servicesDropdown.contains(event.target)) {
+        servicesDropdown.classList.remove('show');
+    }
+
+    // Close all submenus when clicking outside
     submenuContents.forEach(submenu => {
         if (!submenu.contains(event.target)) {
             submenu.classList.remove('show');
         }
     });
+});
 
-    // Close services dropdown when clicked outside
-    if (servicesDropdown && !servicesDropdown.contains(event.target)) {
-        servicesDropdown.classList.remove('show');
-    }
-}
-
-// Attach event listener to detect clicks outside the menu
-document.addEventListener('click', closeMenusOnClickOutside);
-
-// Prevent the click event from propagating to the document when the menu itself is clicked
-document.querySelector('.small-navbar-content').addEventListener('click', function(event) {
+// ✅ Prevent closing when clicking inside menu
+document.querySelector('.small-navbar-content').addEventListener('click', function (event) {
     event.stopPropagation();
 });
 

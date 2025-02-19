@@ -747,7 +747,6 @@ body {
  
     
   
-
 /* Mobile Menu Button */
 ul {
     list-style: none;
@@ -772,35 +771,44 @@ ul {
 
 /* Mobile Navbar Content */
 .small-navbar-content {
-    display: none;
-    background-color:#ADD8E6;
-    width: 50%;
+    display: block; /* Hide using right instead of display: none */
+    background-color: #ADD8E6;
+    width: 60%; /* Adjust width as needed */
     padding: 20px;
-    position: absolute; /* Adjust to absolute, no longer fixed */
-    top: 0px; /* Adjust top margin to make space from the top */
-    right: -60%; /* Initially off-screen */
-    height: auto; /* Allow content to adjust height */
-    max-height: 80vh; /* Limit the max height to 80% of viewport */
-    
-    border-radius: 10px;
+    position: fixed; /* Fixed so it slides properly */
+    top: 0;
+    right: -100%; /* Start fully off-screen */
+    height: 100vh; /* Full height */
+    border-radius: 10px 0 0 10px; /* Rounded left side */
     z-index: 99;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a better look */
-    transition: right 0.3s ease-in-out; /* Smooth sliding effect */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow on the left */
+    transition: right 0.4s ease-in-out; /* Smooth sliding effect */
 }
 
+/* When menu is active */
 .small-navbar-content.show {
-    display: block;
-    right: 0; /* Slide menu into view */
+    right: 0; /* Slide it into view */
+    height: 170px;
+    box-shadow: -6px 0 15px rgba(0, 0, 0, 0.3);
+
 }
 
 .small-navbar-content .small-navbar {
+   
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-    gap: 15px; /* Adjust spacing between menu items */
+    align-items: center; /* Align items to the left */
+    gap: 20px; /* Adjust spacing between menu items */
     width: 100%; /* Ensure the navbar takes up full width */
-}
 
+}
+ .small-navbar-content ul li{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+
+}
 
 
 /* Ensure that the whole services content aligns vertically */
@@ -824,6 +832,9 @@ ul {
     margin-left: 0; /* Ensure the dropdown is aligned to the left */
     position: absolute; /* Keep it aligned with the button */
     left: 0; /* Align to the left of the parent container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+
 }
 
 .small-dropdown-content.show {
@@ -837,7 +848,8 @@ ul {
 
 .small-submenu-btn {
     font-size: 16px;
-    color: #333;
+    font-weight: 600;
+    color: #000000;
     cursor: pointer;
     padding: 10px;
     background-color:#ADD8E6;
@@ -846,6 +858,7 @@ ul {
     border-radius: 5px;
     transition: background-color 0.3s ease; /* Add hover effect */
 }
+
 
 .small-submenu-btn:hover {
     background-color:#ADD8E6; /* Change background color on hover */
@@ -865,6 +878,7 @@ ul {
     display: block;
 }
 
+
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
     .small-menu-toggle {
@@ -877,10 +891,14 @@ ul {
 
     .small-navbar-content.show {
         display: block; /* Show the mobile menu when toggled */
+        margin-right: -25px;
+    
     }
 
     .large-navbar-content {
         display: none; /* Hide large menu on small screens */
     }
 }
+
+
 
