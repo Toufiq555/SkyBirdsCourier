@@ -1,4 +1,6 @@
-/* General Body and Layout */
+
+
+
 body {
   font-family: Arial, sans-serif; /* Sets the font for the entire page */
   margin: 0; /* Removes default margin */
@@ -66,7 +68,7 @@ body {
   display:flex;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
+  height: 100px;
   position: relative;
   overflow: visible;
 }
@@ -97,9 +99,10 @@ body {
 
 .logo img {
   position:relative;
-  height: 70px; /* Adjust logo size */
+  height: 50px; /* Adjust logo size */
   margin-left: 20px;
   margin-bottom: 15px;
+  width: 270px;
 }
 
 /* Navbar Side */
@@ -109,8 +112,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 130px;
-  margin-bottom: 20px;
+  padding-right: 95px;
+  margin-bottom: 12px;
  
 }
 
@@ -121,6 +124,7 @@ body {
  
  
 }
+
 
 .navbar li {
   display: inline;
@@ -138,6 +142,7 @@ body {
 .navbar a:hover {
   border-bottom: 2px solid black;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -160,12 +165,13 @@ body {
 
   .logo img{
       height: 60px;
-    width: 60%;
+    width: 70%;
     padding: 20px;
     margin-left: -30px;
    
   }
 
+}
 
 /*
 
@@ -193,7 +199,7 @@ body {
 */
 
 
-}
+
    
 /* Dropdown menu */
 .dropdown {
@@ -231,6 +237,7 @@ body {
 /* Show the dropdown content when clicked */
 .dropdown-content.show {
   display: block;
+  width: 830px;
 
 }
 
@@ -343,7 +350,7 @@ body {
 @media (max-width: 480px) {
     .contact-info--item {
         flex: 1 1 calc(100% - 0px); /* One item per row on very small screens */
-        min-width: 150px; /* Even smaller for very small screens */
+        min-width: 200px; /* Even smaller for very small screens */
         max-width: 150px;
     }
 }
@@ -609,94 +616,125 @@ textarea{
 }
 
   
-  /* Bootstrap Css  footer */
 
-/* Container Style */
-.container1, .container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px; /* Padding to avoid elements touching the edges */
+/* Footer Section */
+.footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 0px 0px; /* Padding for the top and bottom of the footer */
 }
 
-.container1{
-  margin-bottom: 30px;
-}
-
-/* Row Layout */
-.row {
+/* Footer Content Layout */
+.footer-content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  
-  margin-bottom: -35px; /* Spacing between sections */
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  margin-bottom: 5px;
+  margin-top: 20px;
+  padding-top:0px;
+  margin-left: 56px;
+
 }
 
-/* Column Layout */
-.col-md-3, .col-md-4 {
-  flex: 1 1 22%; /* Flexibility for the column widths */
-  min-width: 250px; /* Ensures columns don’t get too narrow */
-  padding: 15px; /* Padding inside each column */
+/* Column Styling */
+.footer-column {
+  flex: 1 1 22%; /* Each column takes 22% of the width */
+  padding: 15px;
 }
 
-/* Header Styling for Columns */
-h3 {
+/* Column Headers */
+.footer-column h3 {
+ text-align: justify;
   font-size: 1.25rem;
-  color: #fff; /* White text for headings */
+  color: #fff;
   margin-bottom: 10px;
-  text-transform: uppercase; /* Uppercase for cleaner headings */
+  text-transform: uppercase; /* Uppercase text for better readability */
 }
-
 
 /* Text Styling */
-.text-muted  {
-  color: white; /* Light white text */
-  line-height: 1.6; /* Better line height for readability */
+.footer-column p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8); /* Slightly muted white text */
+  line-height: 1.6;
 }
 
-.text-muted a {
-  color: white;
+.footer-column a {
+  color: #ff6600;
   text-decoration: none;
 }
 
-.text-muted a:hover {
-  color: #ff6600; /* Accent color on hover */
+.footer-column a:hover {
+  color: #fff;
 }
 
-/* Social Media Icons Styling */
-ion-icon {
+/* Social Media Icon Styling */
+.footer-column ion-icon {
   font-size: 1.5rem;
   color: #ff6600;
-  margin-right: 10px; /* Spacing between icons */
+  margin-right: 10px;
 }
 
-/* Footer Background and Color */
-footer {
-  background-color: #333; /* Dark background for footer */
-  color: #fff; /* White text for footer */
-  padding: 30px 0; /* Padding for top and bottom of footer */
+.footer-column .social-icons a {
+  margin-right: 15px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: center;
-}
-
-/* Footer Links and Content Styling */
-footer p {
+  padding: 0px;
   font-size: 0.9rem;
-  line-height: 1.5;
-  color:rgb(240, 228, 228);
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Footer Section Links */
-footer a {
-  color: #ff6600; /* Accent color for links */
+/* Footer Links */
+.footer-bottom a {
+  color: #ff6600;
   text-decoration: none;
 }
 
-footer a:hover {
-  color: #fff; /* White color on hover for better visibility */
+.footer-bottom a:hover {
+  color: #fff;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-right: 65px;
+  }
 
+  .footer-column {
+      flex: 1 1 100%;
+      margin-bottom: 20px; /* Add spacing between columns */
+  }
 
-  
+  .footer-bottom {
+      font-size: 1rem; /* Slightly larger text for mobile view */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+      flex: 1 1 100%;
+      margin-bottom: 15px;
+  }
+
+  .footer-bottom {
+      font-size: 1rem; /* Adjust footer text size for very small screens */
+  }
+
+  .footer-column .social-icons a {
+      font-size: 1.2rem;
+  }
+}
+
+ 
+
 /* Mobile Menu Button */
 ul {
   list-style: none;
@@ -706,8 +744,8 @@ ul {
 .small-menu-toggle {
   display: none;
   position: absolute;
-  top: 40px;
-  right: 30px;
+  top: 1px;
+  right: 12px;
   z-index: 100;
 }
 
