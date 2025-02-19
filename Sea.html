@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
-    <title>Home</title>
-    <link rel="stylesheet" href="home.css">
+    
+    <title>Sea Cargo</title>
+    <link rel="stylesheet" href="Sea.css">
+    
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     
@@ -146,121 +146,40 @@
 </div>
  </header>
 
- <!-- Banner Section -->
- <div class="banner-container">
-    <div class="sliding-banner">
-        <p>Fuel SurCharge Hiked by 25% w.e.f. 01/03/2017 Due to Recently Increased In Fuel Prices </p>
-    </div>
-</div>
-
-    <!-- Main Content Section -->
-    <main class="main-content">
-        <section class="section-1">
-        
-            <!-- Container that holds both the content and the image slider -->
-            <div class="section-1-container">
-                
-                <!-- Image Slider -->
-                <div class="slider">
-                    <div class="slide-container">
-                        <!-- Each image has its own container with centered content -->
-                        <div class="slide">
-                            <img src="trucck.avif" alt="Image 1" class="image">
-                            <div class="content-container">
-                                <h2>SECURE</h2>
-                                <p>Providing quality logistics and transportation services to meet your needs.</p>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="air.jpg" alt="Image 2" class="image">
-                            <div class="content-container">
-                                <h2>RELIABLE SERVICE.</h2>
-                                <p>We provide reliable and timely deliveries for all your needs.</p>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="godown.avif" alt="Image 3" class="image">
-                            <div class="content-container">
-                                <h2>WHEN FAST DELIVERY IS EVERYTHING.</h2>
-                                <p>We understand your customers expect you to be lightning fast and
-                                    delivery products in the best condition.Sky Bird Couriers is at your service.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-    <!-- Our Services Section -->
-    <section class="our-services-section2">
-        <h2>WEB TRACK</h2>
-        <div class="services-content-section2">
-            <!-- Left - Image -->
-            <div class="image-container-section2">
-                <img src="map.png" alt="Our Service">
-            </div>
-
-            <!-- Right - Content -->
-            <div class="content-container-section2">
-                <h2>Enter AWB No. </h2>
-                <input type="text" id="name" name="name" placeholder="Enter AWB">
-                <p class="example-text-section2">For Multiple Queries use Commas(,)Eg:5761526, 5761527</p>
-                <button type="submit">Go</button>
-            </div>
-        </div>
-    </section>
-
-
-          <!-- Gallery Section -->
-
-<div class="gallery">
-    <h2>OUR SERVICES</h2>
-</div>
-<div class="gallery--items">
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="gal1.jpg" alt="Air Cargo">
-            <div class="gallery--overlay">
-                <h3>Air Cargo</h3>
-                <a href="Air.html" class="btn">View Details</a>
-            </div>
+     <!-- Banner Section -->
+     <div class="banner-container">
+        <div class="sliding-banner">
+            <p>Fuel SurCharge Hiked by 25% w.e.f. 01/03/2017 Due to Recently Increased In Fuel Prices </p>
         </div>
     </div>
 
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="gal2.jpg" alt="Surface Cargo">
-            <div class="gallery--overlay">
-                <h3>Surface Cargo</h3>
-                <a href="Road.html" class="btn">View Details</a>
-            </div>
+    <div class="seacargo-container">
+        <img src="gal4.jpg" alt="Sea Cargo" class="seacargo-image">
+        <div class="seacargo-info">
+            <h2>About Sea Cargo</h2>
+            <p>
+                Sea Cargo is the most cost-effective and efficient method for transporting large quantities of goods across international waters. With the ability to handle oversized shipments and heavy cargo, it is the backbone of global trade.
+            </p>
+            <p>
+                Whether you're shipping raw materials, containers, or bulk goods, Sea Cargo provides a secure and eco-friendly solution, ensuring seamless transportation across continents.
+            </p>
+            
+            <ul>
+                <li><strong>Cost-Effective:</strong> The most economical solution for large and bulk shipments.</li>
+                <li><strong>High Capacity:</strong> Suitable for heavy, oversized, and high-volume cargo.</li>
+                <li><strong>Global Connectivity:</strong> Covers major ports worldwide, enabling seamless international trade.</li>
+                <li><strong>Eco-Friendly:</strong> A lower carbon footprint compared to air and road transport.</li>
+                <li><strong>Secure Shipping:</strong> Advanced container security and tracking ensure safe transit.</li>
+            </ul>
+            <p>
+                From manufacturers to import/export businesses, Sea Cargo is a reliable and scalable solution that ensures smooth global trade while keeping costs low.
+            </p>
         </div>
     </div>
+    
 
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="train1.jpg" alt="Train Cargo">
-            <div class="gallery--overlay">
-                <h3>Train Cargo</h3>
-                <a href="Train.html" class="btn">View Details</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="gal4.jpg" alt="By Sea Cargo">
-            <div class="gallery--overlay">
-                <h3>By Sea Cargo</h3>
-                <a href="Sea.html" class="btn">View Details</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-  
 <!-- Footer -->
 <footer class="footer">
     <!-- Footer Content -->
@@ -308,35 +227,11 @@
         <p class="TP">Terms of Use | Privacy Policy</p>
     </div>
 </footer>
-    
-        
-<!-- Script for Image Slider -->
-    <script>
-        let slideIndex = 0;
 
-        // Function to show slides
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            
-            // Show the current slide
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "block";
-        }
-
-        // Set interval to change images every 10 seconds
-        setInterval(showSlides, 10000);  // Changed to 10 seconds
-
-        // Initialize the first slide
-        showSlides();
-
-          // Toggle the dropdown menu
-          document.addEventListener("DOMContentLoaded", function () {
+<script>
+// Toggle the dropdown menu
+          
+    document.addEventListener("DOMContentLoaded", function () {
         const dropdownBtn = document.querySelector(".dropbtn");
         const dropdownContent = document.querySelector(".dropdown-content");
 
@@ -350,12 +245,14 @@
             }
         });
     });
-        
+
+
 // Toggle the mobile menu visibility
 function toggleDropdownsmall() {
     var dropdownContent = document.querySelector('.small-navbar-content');
     dropdownContent.classList.toggle('show'); // Toggle visibility for the mobile menu
 }
+
 
 // Toggle the small dropdown content for "Services"
 function toggleDropdownContent() {
@@ -402,9 +299,9 @@ document.querySelector('.small-navbar-content').addEventListener('click', functi
     event.stopPropagation();
 });
 
-        
-    </script>
-   
 
+</script>
+
+        
 </body>
 </html>

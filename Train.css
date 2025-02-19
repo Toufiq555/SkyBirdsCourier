@@ -1,0 +1,647 @@
+
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the entire page */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    overflow-x: hidden;
+}
+
+/* Banner Section */
+.banner-container {
+    background-color: white; /* Sets the background color of the banner */
+    text-align: center; /* Centers the text inside the banner */
+    padding: 10px 0; /* Adds padding to the top and bottom of the banner */
+    overflow: hidden; /* Ensures text doesn't overflow */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  .sliding-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .sliding-banner p {
+    font-weight: bold;
+    margin: 0; /* Removes default margin */
+    font-size: 18px; /* Sets font size of the banner text */
+    color: rgb(0, 0, 0); /* Sets the text color */
+    animation: slide-text 18s linear infinite; /* Animates the text sliding from right to left */
+    white-space: nowrap; /* Prevents wrapping */
+  }
+  
+  @keyframes slide-text {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .banner-container{
+
+        margin-right: 15px;
+    }
+    .sliding-banner p {
+        
+        font-size: 16px; /* Adjusts font size for smaller screens */
+        animation-duration: 12s; /* Speeds up animation for smaller screens */
+    }
+  }
+  @media (max-width: 480px) {
+    .sliding-banner p {
+        font-size: 16px; /* Adjusts font size for smaller screens */
+        animation-duration: 12s; /* Speeds up animation for smaller screens */
+    }
+  }
+
+/* Header Container */
+.header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+
+/* Background with diagonal split */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 90%;
+    background-color:#ADD8E6; /* Grey color for navbar side */
+    transform: skewX(-50deg);
+    transform-origin: top left;
+    z-index: -1;
+}
+
+/* Logo Side */
+.logo {
+    padding-left: 50px;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+   
+}
+
+.logo img {
+    position:relative;
+    height: 50px; /* Adjust logo size */
+    margin-left: 20px;
+    margin-bottom: 15px;
+    width: 270px;
+}
+
+/* Navbar Side */
+.navbar-container {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 95px;
+    margin-bottom: 12px;
+   
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+   
+   
+}
+
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(8, 8, 10);
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        width: 365px;
+    }
+    .header::before {
+        display: none; /* Remove diagonal split on small screens */
+    }
+    .navbar-container {
+        display: none;
+        width: 90%;
+        justify-content: center;
+        padding: 15px;
+        margin-right: 40px;
+    }
+  
+    .logo img{
+        height: 60px;
+      width: 70%;
+      padding: 20px;
+      margin-left: -30px;
+     
+    }
+
+}
+  
+  /*
+  
+    .navbar {
+        flex-direction: column;
+    }
+  
+    .services-page {
+        flex-direction: column;
+        align-items: center;
+       
+       
+    }
+    .dropdown-content.show{
+        width: 230%;
+    }
+  
+    .dropdown-content {
+     
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+  }
+*/
+
+  /* Dropdown menu */
+  .dropdown {
+    position: relative;
+}
+
+/* Button that opens the dropdown */
+.dropbtn {
+   
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+   
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(241, 236, 236);
+    width: 1000px; /* Set a specific width for the dropdown */
+    top: 90px;
+    right: -10px; 
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 999;
+   
+      
+    
+}
+
+
+/* Show the dropdown content when clicked */
+.dropdown-content.show {
+    display: block;
+    width: 830px;
+  
+}
+
+/* Styling the columns inside the dropdown */
+.services-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between columns */
+    justify-content: space-around;
+}
+
+/* Styling each column */
+/* .services-column {
+    display: flex;
+    flex-direction: column;
+}   */
+
+/* Styling the list inside each column */
+.services-column h2{
+    text-align:center;
+    
+}
+
+.services-column ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 350px;
+    text-align:left;
+}
+
+/* Styling list items */
+.services-column li {
+    
+    width:250px;
+    line-height: 2;
+    padding: 3px 1px;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+      
+}
+
+.services-column h2, .services-column ul, .services-column li {
+    display: block;
+    visibility: visible;
+}
+
+/* Hover effect for the list items */
+.services-column li:hover {
+    
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* General container styles */
+.traincargo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Image styles */
+.traincargo-image {
+    width: 50%;
+    height: 240px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Information section styles */
+.traincargo-info {
+    margin-top: 20px;
+    width: 865px;
+    padding-left: 142px;
+}
+
+/* Heading styles */
+.traincargo-info h2, .traincargo-info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Paragraph styles */
+.traincargo-info p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* List styles for Train Cargo benefits */
+.traincargo-info ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: start;
+}
+
+.traincargo-info li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.traincargo-info li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design - Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .traincargo-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .traincargo-info {
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .traincargo-info h2, .traincargo-info h3 {
+        font-size: 20px;
+    }
+
+    .traincargo-info p,
+    .traincargo-info li {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design - Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .traincargo-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .traincargo-info h2, .traincargo-info h3 {
+        font-size: 18px;
+    }
+
+    .traincargo-info p,
+    .traincargo-info li {
+        font-size: 12px;
+    }
+}
+
+
+
+/* Footer Section */
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 0px 0px; /* Padding for the top and bottom of the footer */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    margin-bottom: 5px;
+    margin-top: 20px;
+    padding-top:0px;
+    margin-left: 56px;
+
+}
+
+/* Column Styling */
+.footer-column {
+    flex: 1 1 22%; /* Each column takes 22% of the width */
+    padding: 15px;
+}
+
+/* Column Headers */
+.footer-column h3 {
+   
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase text for better readability */
+}
+
+/* Text Styling */
+.footer-column p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8); /* Slightly muted white text */
+    line-height: 1.6;
+}
+
+.footer-column a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+/* Social Media Icon Styling */
+.footer-column ion-icon {
+    font-size: 1.5rem;
+    color: #ff6600;
+    margin-right: 10px;
+}
+
+.footer-column .social-icons a {
+    margin-right: 15px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding: 0px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Footer Links */
+.footer-bottom a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-right: 65px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px; /* Add spacing between columns */
+    }
+
+    .footer-bottom {
+        font-size: 1rem; /* Slightly larger text for mobile view */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer-bottom {
+        font-size: 1rem; /* Adjust footer text size for very small screens */
+    }
+
+    .footer-column .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Mobile Menu Button */
+ul {
+    list-style: none;
+    padding: 0;
+}
+/* Mobile Menu Button */
+.small-menu-toggle {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 12px;
+    z-index: 100;
+}
+
+.small-menu-btn {
+    font-size: 30px;
+    color:#ADD8E6;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile Navbar Content */
+.small-navbar-content {
+    display: block; /* Hide using right instead of display: none */
+    background-color: #ADD8E6;
+    width: 60%; /* Adjust width as needed */
+    padding: 20px;
+    position: fixed; /* Fixed so it slides properly */
+    top: 0;
+    right: -100%; /* Start fully off-screen */
+    height: 100vh; /* Full height */
+    border-radius: 10px 0 0 10px; /* Rounded left side */
+    z-index: 99;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow on the left */
+    transition: right 0.4s ease-in-out; /* Smooth sliding effect */
+}
+
+/* When menu is active */
+.small-navbar-content.show {
+    right: 0; /* Slide it into view */
+    height: 170px;
+}
+
+.small-navbar-content .small-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items to the left */
+    gap: 20px; /* Adjust spacing between menu items */
+    width: 100%; /* Ensure the navbar takes up full width */
+
+}
+ .small-navbar-content ul li{
+    color: #ff6600;
+}
+
+
+/* Ensure that the whole services content aligns vertically */
+.small-services-page {
+    display: flex;
+    flex-direction: column; /* Stack the different service categories vertically */
+    gap: 20px; /* Space between each service category */
+}
+
+/* Dropdown Content */
+.small-dropdown-content {
+    display: none;
+    background-color:#ADD8E6;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: left; /* Align text to the left */
+    margin-left: 0; /* Ensure the dropdown is aligned to the left */
+    position: absolute; /* Keep it aligned with the button */
+    left: 0; /* Align to the left of the parent container */
+}
+
+.small-dropdown-content.show {
+    display: block;
+}
+
+/* Submenu Styling */
+.small-dropdown-submenu {
+    position: relative;
+}
+
+.small-submenu-btn {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    background-color:#ADD8E6;
+    border: none;
+    width: 90%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add hover effect */
+}
+
+.small-submenu-btn:hover {
+    background-color:#ADD8E6; /* Change background color on hover */
+}
+
+.small-submenu-content {
+    display: none;
+    background-color:#ADD8E6;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.small-submenu-content.show {
+    display: block;
+}
+li{
+    color: #000;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .small-menu-toggle {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    .small-navbar-content {
+        display: none; /* Hide mobile menu initially */
+    }
+
+    .small-navbar-content.show {
+        display: block; /* Show the mobile menu when toggled */
+    }
+
+    .large-navbar-content {
+        display: none; /* Hide large menu on small screens */
+    }
+}
+
+

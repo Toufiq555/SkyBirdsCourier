@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
-    <title>Home</title>
-    <link rel="stylesheet" href="home.css">
+    
+    <title>Road Cargo</title>
+    <link rel="stylesheet" href="Road.css">
+    
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     
@@ -146,121 +146,39 @@
 </div>
  </header>
 
- <!-- Banner Section -->
- <div class="banner-container">
-    <div class="sliding-banner">
-        <p>Fuel SurCharge Hiked by 25% w.e.f. 01/03/2017 Due to Recently Increased In Fuel Prices </p>
-    </div>
-</div>
-
-    <!-- Main Content Section -->
-    <main class="main-content">
-        <section class="section-1">
-        
-            <!-- Container that holds both the content and the image slider -->
-            <div class="section-1-container">
-                
-                <!-- Image Slider -->
-                <div class="slider">
-                    <div class="slide-container">
-                        <!-- Each image has its own container with centered content -->
-                        <div class="slide">
-                            <img src="trucck.avif" alt="Image 1" class="image">
-                            <div class="content-container">
-                                <h2>SECURE</h2>
-                                <p>Providing quality logistics and transportation services to meet your needs.</p>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="air.jpg" alt="Image 2" class="image">
-                            <div class="content-container">
-                                <h2>RELIABLE SERVICE.</h2>
-                                <p>We provide reliable and timely deliveries for all your needs.</p>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="godown.avif" alt="Image 3" class="image">
-                            <div class="content-container">
-                                <h2>WHEN FAST DELIVERY IS EVERYTHING.</h2>
-                                <p>We understand your customers expect you to be lightning fast and
-                                    delivery products in the best condition.Sky Bird Couriers is at your service.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-    <!-- Our Services Section -->
-    <section class="our-services-section2">
-        <h2>WEB TRACK</h2>
-        <div class="services-content-section2">
-            <!-- Left - Image -->
-            <div class="image-container-section2">
-                <img src="map.png" alt="Our Service">
-            </div>
-
-            <!-- Right - Content -->
-            <div class="content-container-section2">
-                <h2>Enter AWB No. </h2>
-                <input type="text" id="name" name="name" placeholder="Enter AWB">
-                <p class="example-text-section2">For Multiple Queries use Commas(,)Eg:5761526, 5761527</p>
-                <button type="submit">Go</button>
-            </div>
-        </div>
-    </section>
-
-
-          <!-- Gallery Section -->
-
-<div class="gallery">
-    <h2>OUR SERVICES</h2>
-</div>
-<div class="gallery--items">
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="gal1.jpg" alt="Air Cargo">
-            <div class="gallery--overlay">
-                <h3>Air Cargo</h3>
-                <a href="Air.html" class="btn">View Details</a>
-            </div>
+     <!-- Banner Section -->
+     <div class="banner-container">
+        <div class="sliding-banner">
+            <p>Fuel SurCharge Hiked by 25% w.e.f. 01/03/2017 Due to Recently Increased In Fuel Prices </p>
         </div>
     </div>
 
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="gal2.jpg" alt="Surface Cargo">
-            <div class="gallery--overlay">
-                <h3>Surface Cargo</h3>
-                <a href="Road.html" class="btn">View Details</a>
-            </div>
+    <div class="roadcargo-container">
+        <img src="gal2.jpg" alt="Road Cargo" class="roadcargo-image">
+        <div class="roadcargo-info">
+            <h2>About Road Cargo</h2>
+            <p>
+                Road Cargo is one of the most versatile and widely used freight transportation methods, offering door-to-door delivery services for all types of goods. It is ideal for short to medium-distance shipments and provides flexibility in routes and schedules.
+            </p>
+            <p>
+                Whether you're transporting perishable goods, retail products, or industrial materials, Road Cargo ensures fast, efficient, and direct delivery with real-time tracking options.
+            </p>
+            
+            <ul>
+                <li><strong>Flexibility:</strong> Easily transport goods across cities, towns, and rural areas with customizable routes.</li>
+                <li><strong>Cost-Effective:</strong> Affordable transport for small and medium-sized shipments.</li>
+                <li><strong>Door-to-Door Delivery:</strong> Direct delivery to your destination without additional handling.</li>
+                <li><strong>Fast & Efficient:</strong> Quick transit times, especially for regional and local deliveries.</li>
+                <li><strong>Real-Time Tracking:</strong> Monitor shipments with GPS tracking and updates.</li>
+            </ul>
+            <p>
+                From small businesses to large enterprises, Road Cargo is an essential logistics solution that ensures safe, timely, and cost-efficient transportation of goods.
+            </p>
         </div>
     </div>
+    
 
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="train1.jpg" alt="Train Cargo">
-            <div class="gallery--overlay">
-                <h3>Train Cargo</h3>
-                <a href="Train.html" class="btn">View Details</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="gallery--item">
-        <div class="gallery--img">
-            <img src="gal4.jpg" alt="By Sea Cargo">
-            <div class="gallery--overlay">
-                <h3>By Sea Cargo</h3>
-                <a href="Sea.html" class="btn">View Details</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-  
 <!-- Footer -->
 <footer class="footer">
     <!-- Footer Content -->
@@ -308,35 +226,11 @@
         <p class="TP">Terms of Use | Privacy Policy</p>
     </div>
 </footer>
-    
-        
-<!-- Script for Image Slider -->
-    <script>
-        let slideIndex = 0;
 
-        // Function to show slides
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            
-            // Show the current slide
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "block";
-        }
-
-        // Set interval to change images every 10 seconds
-        setInterval(showSlides, 10000);  // Changed to 10 seconds
-
-        // Initialize the first slide
-        showSlides();
-
-          // Toggle the dropdown menu
-          document.addEventListener("DOMContentLoaded", function () {
+<script>
+// Toggle the dropdown menu
+          
+    document.addEventListener("DOMContentLoaded", function () {
         const dropdownBtn = document.querySelector(".dropbtn");
         const dropdownContent = document.querySelector(".dropdown-content");
 
@@ -350,12 +244,14 @@
             }
         });
     });
-        
+
+
 // Toggle the mobile menu visibility
 function toggleDropdownsmall() {
     var dropdownContent = document.querySelector('.small-navbar-content');
     dropdownContent.classList.toggle('show'); // Toggle visibility for the mobile menu
 }
+
 
 // Toggle the small dropdown content for "Services"
 function toggleDropdownContent() {
@@ -402,9 +298,9 @@ document.querySelector('.small-navbar-content').addEventListener('click', functi
     event.stopPropagation();
 });
 
-        
-    </script>
-   
 
+</script>
+
+        
 </body>
 </html>
