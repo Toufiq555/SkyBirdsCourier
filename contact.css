@@ -423,12 +423,13 @@ body {
   /* Map container */
   .map-container {
     width: 48%;  /* Adjust width */
-    height: 400px; /* Adjust height */
+    height: 440px; /* Adjust height */
     position: relative;
     background-color: #f0f0f0;
     border-radius: 2px;
     overflow: hidden;
-    right: 30px;;
+    right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   /* Responsive Iframe */
@@ -475,16 +476,27 @@ body {
     width: 48%; /* Adjust width of each item */
     margin-bottom: 10px;
   }
-  
+
   .contact-item input {
-    width: 100%; /* Make inputs take full width */
+    width: 90%; /* Make inputs take full width */
+    padding: 8px;
+    margin-top: 5px;
+  }
+
+  .contact-item1{
+    width: 48%; /* Adjust width of each item */
+    margin-bottom: 10px;
+  }
+
+  .contact-item1 input {
+    width: 200%; /* Make inputs take full width */
     padding: 8px;
     margin-top: 5px;
   }
   
   /* Message section */
   textarea {
-    width: 100%;
+    width: 96%;
     padding: 10px;
     margin-top: 10px;
     height: 80px;
@@ -492,9 +504,9 @@ body {
   
   /* Submit Button */
   button {
-   margin-left: 45%;
+   margin-left: 42%;
     margin-top: 20px;
-    padding: 10px 15px;
+    padding: 12px 24px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -507,7 +519,7 @@ body {
   /* Wrapper for map and leave message */
 @media (max-width: 768px) {
   .contact-container {
-    flex-direction: column;  /* Stack elements vertically */
+    flex-direction: column-reverse;  /* Stack elements vertically */
     padding: 20px;  /* Reduce padding */
     height: auto;  /* Allow height to adjust based on content */
   }
@@ -543,27 +555,53 @@ body {
   }
 
   .contact-item {
+
     width: 90%;  /* Full width on smaller screens */
     margin-bottom: 10px;  /* Add space between items */
   }
 
+  .contact-item1{
+    margin-left: 15px;
+    width: 90%;  /* Full width on smaller screens */
+    margin-bottom: 10px;  /* Add space between items */
+  }
+
+  .contact-item1 input{
+    margin-left: 3px;
+    width: 88%;
+    padding: 9px;  /* Increase padding for better interaction */
+    margin-top: 5px;  /* Adjust margin for consistent spacing */
+    font-size: 16px;  /* Adjust font size for better readability */
+
+  }
   /* Contact item input fields */
-  .contact-item input,
-  textarea {
+  .contact-item input {
+    width: 90%;
+    margin-left: 5px;
     padding: 10px;  /* Increase padding for better interaction */
     margin-top: 5px;  /* Adjust margin for consistent spacing */
     font-size: 16px;  /* Adjust font size for better readability */
   }
 
   /* Message section */
-  textarea {
-    margin-left: 10px;
+  .message textarea {
+    
     height: 50px;  /* Increase height for better visibility */
+    width: 83%;
+    margin-left: 5px;
+    padding: 10px;  /* Increase padding for better interaction */
+    margin-top: 5px;  /* Adjust margin for consistent spacing */
+    font-size: 16px;  /* Adjust font size for better readability */
+  
   }
+ .message{
+  margin-left: 14px;
+ }
 
   /* Submit Button */
   button {
-    width: 80%;  /* Make button full width */
+    margin-bottom: 10px;
+    width: 50%;  /* Make button full width */
     padding: 12px 15px;  /* Increase padding */
     font-size: 16px;  /* Adjust font size for readability */
     margin-top: 20px;  /* Add space above the button */
@@ -580,12 +618,13 @@ body {
   /* Map container */
   .map-container {
     height: 200px;  /* Decrease map height */
+    margin-bottom: 10px;
   }
 
   /* Leave Message container */
   .leave-message-container {
     padding: 0px;  /* Reduce padding slightly */
-    margin-top: 5px;  /* Reduce top margin */
+    margin-top: -20px;  /* Reduce top margin */
     margin-bottom: 30px;
     margin-left: 5px;
   }
@@ -607,7 +646,7 @@ textarea{
 }
   /* Button */
   button {
-   margin-left: 30px;
+   margin-left: 85px;
     padding: 10px 15px;  /* Adjust padding for small screens */
     font-size: 14px;  /* Reduce font size for small screens */
   }

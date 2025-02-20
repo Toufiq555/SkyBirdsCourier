@@ -385,6 +385,7 @@ body {
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
     .section-1 {
+        margin-top: -75px;
         height: auto; /* Adjusts height for small screens */
         padding: 20px; /* Adds padding for better spacing */
     }
