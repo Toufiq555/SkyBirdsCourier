@@ -385,11 +385,12 @@ body {
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
     .section-1 {
+      margin-left: -120px;
+        width: 630px;
         margin-top: -75px;
         height: auto; /* Adjusts height for small screens */
-        padding: 20px; /* Adds padding for better spacing */
+        padding: 0px; /* Adds padding for better spacing */
     }
-
     .section-1-container {
         flex-direction: column; /* Stacks elements vertically */
         height: auto;
@@ -418,6 +419,11 @@ body {
 
     .content-container h2 {
         font-size: 30px; /* Reduces heading size */
+    }
+
+    .image-container-section2{ /* map image */
+        display: none;
+
     }
 
     .content-container p {
