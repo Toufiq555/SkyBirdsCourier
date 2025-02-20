@@ -752,6 +752,7 @@ body {
  
     
   
+
 /* Mobile Menu Button */
 ul {
     list-style: none;
@@ -793,10 +794,43 @@ ul {
 /* When menu is active */
 .small-navbar-content.show {
     right: 0; /* Slide it into view */
-    height: 170px;
+    height: 220px;
     box-shadow: -6px 0 15px rgba(0, 0, 0, 0.3);
 
 }
+
+.small-navbar a {
+    font-size: 18px; /* Slightly larger for better readability */
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    font-weight: 600; /* Medium bold */
+    color: #080000; /* White text for contrast */
+    text-decoration: none; /* Remove default underline */
+    padding: 10px 20px; /* Add spacing for better clickability */
+    border-radius: 5px; /* Soft rounded edges */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    display: inline-block; /* Helps with padding and spacing */
+}
+
+/* Elegant hover effect */
+.small-navbar a:hover {
+    background-color: #ff6600; /* Orange highlight */
+    color: #fff; /* Keep text white */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Active link effect */
+.small-navbar a:active {
+    background-color: #e65c00; /* Darker orange for active click */
+    transform: scale(1); /* No zoom on click */
+}
+
+/* Styling for the list items (optional) */
+.small-navbar li {
+    list-style:none; /* Remove bullet points */
+ 
+}
+
 
 .small-navbar-content .small-navbar {
    
@@ -904,6 +938,4 @@ ul {
         display: none; /* Hide large menu on small screens */
     }
 }
-
-
 
