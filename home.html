@@ -423,19 +423,32 @@ document.querySelector('.small-navbar-content').addEventListener('click', functi
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Always remove the "show" class when the page loads
     var menu = document.querySelector('.small-navbar-content');
-    if (menu) {
-        menu.classList.remove('show'); // Close the menu
-    }
-
     var servicesDropdown = document.querySelector('.small-dropdown-content');
-    if (servicesDropdown) {
-        servicesDropdown.classList.remove('show'); // Close the services dropdown
-    }
-
     var submenuContents = document.querySelectorAll('.small-submenu-content');
-    submenuContents.forEach(submenu => submenu.classList.remove('show')); // Close all submenus
+
+    if (menu) menu.classList.remove('show');
+    if (servicesDropdown) servicesDropdown.classList.remove('show');
+    submenuContents.forEach(submenu => submenu.classList.remove('show'));
+
+    // Reset menu state in localStorage
+    localStorage.removeItem("menuOpen");
 });
+
+// ✅ Toggle the main menu and store state
+function toggleDropdownsmall() {
+    var dropdownContent = document.querySelector('.small-navbar-content');
+
+    dropdownContent.classList.toggle('show');
+
+    // Store menu state in localStorage
+    if (dropdownContent.classList.contains('show')) {
+        localStorage.setItem("menuOpen", "true");
+    } else {
+        localStorage.removeItem("menuOpen");
+    }
+}
 
 
 
