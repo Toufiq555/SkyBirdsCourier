@@ -345,16 +345,22 @@
         });
     });
 
+
+
+
+
 // ✅ Toggle the main menu
 function toggleDropdownsmall() {
     var dropdownContent = document.querySelector('.small-navbar-content');
-
     dropdownContent.classList.toggle('show');
 
-    // Adjust position to make it scrollable
+    // Save the state to localStorage
     if (dropdownContent.classList.contains('show')) {
+        localStorage.setItem('menuOpen', 'true');
         dropdownContent.style.position = "absolute";
         dropdownContent.style.top = window.scrollY + "px";
+    } else {
+        localStorage.setItem('menuOpen', 'false');
     }
 }
 
@@ -362,12 +368,26 @@ function toggleDropdownsmall() {
 function toggleDropdownContent() {
     var dropdownContent = document.querySelector('.small-dropdown-content');
     dropdownContent.classList.toggle('show');
+
+    // Save the state to localStorage
+    if (dropdownContent.classList.contains('show')) {
+        localStorage.setItem('servicesDropdownOpen', 'true');
+    } else {
+        localStorage.setItem('servicesDropdownOpen', 'false');
+    }
 }
 
 // ✅ Toggle submenus (Domestic, International, Value-added)
 function toggleSubmenu(id) {
     var submenu = document.getElementById(id);
     submenu.classList.toggle('show');
+
+    // Save the state to localStorage
+    if (submenu.classList.contains('show')) {
+        localStorage.setItem(`submenu_${id}_Open`, 'true');
+    } else {
+        localStorage.setItem(`submenu_${id}_Open`, 'false');
+    }
 }
 
 // ✅ Close menu & dropdowns when clicking outside
@@ -382,17 +402,20 @@ document.addEventListener('click', function (event) {
     // Check if click is outside menu and button
     if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
         menu.classList.remove('show'); // Hide main menu
+        localStorage.setItem('menuOpen', 'false');
     }
 
     // Close services dropdown
     if (servicesDropdown && !servicesDropdown.contains(event.target)) {
         servicesDropdown.classList.remove('show');
+        localStorage.setItem('servicesDropdownOpen', 'false');
     }
 
     // Close all submenus when clicking outside
     submenuContents.forEach(submenu => {
         if (!submenu.contains(event.target)) {
             submenu.classList.remove('show');
+            localStorage.setItem(`submenu_${submenu.id}_Open`, 'false');
         }
     });
 });
@@ -402,50 +425,29 @@ document.querySelector('.small-navbar-content').addEventListener('click', functi
     event.stopPropagation();
 });
 
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Always remove the "show" class when the page loads
+// ✅ Restore menu state on page load
+document.addEventListener('DOMContentLoaded', function () {
     var menu = document.querySelector('.small-navbar-content');
     var servicesDropdown = document.querySelector('.small-dropdown-content');
     var submenuContents = document.querySelectorAll('.small-submenu-content');
 
-    if (menu) menu.classList.remove('show');
-    if (servicesDropdown) servicesDropdown.classList.remove('show');
-    submenuContents.forEach(submenu => submenu.classList.remove('show'));
-
-    // Reset menu state in localStorage
-    localStorage.removeItem("menuOpen");
-});
-
-// ✅ Toggle the main menu and store state
-function toggleDropdownsmall() {
-    var dropdownContent = document.querySelector('.small-navbar-content');
-
-    dropdownContent.classList.toggle('show');
-
-    // Store menu state in localStorage
-    if (dropdownContent.classList.contains('show')) {
-        localStorage.setItem("menuOpen", "true");
-    } else {
-        localStorage.removeItem("menuOpen");
+    // Restore main menu state
+    if (localStorage.getItem('menuOpen') === 'true') {
+        menu.classList.add('show');
     }
-}
 
+    // Restore services dropdown state
+    if (localStorage.getItem('servicesDropdownOpen') === 'true') {
+        servicesDropdown.classList.add('show');
+    }
 
-
-
-
-
-
-
+    // Restore submenu states
+    submenuContents.forEach(submenu => {
+        if (localStorage.getItem(`submenu_${submenu.id}_Open`) === 'true') {
+            submenu.classList.add('show');
+        }
+    });
+});
 
 
 </script>
