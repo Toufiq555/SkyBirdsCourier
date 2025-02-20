@@ -357,23 +357,28 @@ function toggleDropdownsmall() {
 
     dropdownContent.classList.toggle('show');
 
-    // Adjust position to make it scrollable
+    // Allow menu to scroll with the page
     if (dropdownContent.classList.contains('show')) {
-        dropdownContent.style.position = "absolute";
-        dropdownContent.style.top = window.scrollY + "px";
+        dropdownContent.style.position = "fixed"; // Fix it to stay in place
+        dropdownContent.style.top = "0"; // Keep at top
+        dropdownContent.style.right = "0"; // Align to right
     }
 }
 
 // ✅ Toggle the small "Services" dropdown
 function toggleDropdownContent() {
     var dropdownContent = document.querySelector('.small-dropdown-content');
-    dropdownContent.classList.toggle('show');
+    if (dropdownContent) {
+        dropdownContent.classList.toggle('show');
+    }
 }
 
 // ✅ Toggle submenus (Domestic, International, Value-added)
 function toggleSubmenu(id) {
     var submenu = document.getElementById(id);
-    submenu.classList.toggle('show');
+    if (submenu) {
+        submenu.classList.toggle('show');
+    }
 }
 
 // ✅ Close menu & dropdowns when clicking outside
@@ -385,9 +390,11 @@ document.addEventListener('click', function (event) {
     // Submenus list
     var submenuContents = document.querySelectorAll('.small-submenu-content');
 
-    // Check if click is outside menu and button
-    if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
-        menu.classList.remove('show'); // Hide main menu
+    // Ensure elements exist before applying logic
+    if (menu && menuButton) {
+        if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+            menu.classList.remove('show'); // Hide main menu
+        }
     }
 
     // Close services dropdown
@@ -404,10 +411,28 @@ document.addEventListener('click', function (event) {
 });
 
 // ✅ Prevent closing when clicking inside menu
-document.querySelector('.small-navbar-content').addEventListener('click', function (event) {
-    event.stopPropagation();
-});
+var navbarContent = document.querySelector('.small-navbar-content');
+if (navbarContent) {
+    navbarContent.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+}
 
+// ✅ Ensure menu is closed when returning to the page
+document.addEventListener("DOMContentLoaded", function () {
+    var menu = document.querySelector('.small-navbar-content');
+    if (menu) {
+        menu.classList.remove('show');
+    }
+
+    var servicesDropdown = document.querySelector('.small-dropdown-content');
+    if (servicesDropdown) {
+        servicesDropdown.classList.remove('show');
+    }
+
+    var submenuContents = document.querySelectorAll('.small-submenu-content');
+    submenuContents.forEach(submenu => submenu.classList.remove('show'));
+});
         
     </script>
    
