@@ -412,10 +412,13 @@ body {
     }
 
     .content-container {
-        width: 90%; /* Adjusts content width for better fit */
+        width: 55%; /* Adjusts content width for better fit */
         font-size: 16px; /* Scales text for readability */
         padding: 15px;
     }
+    
+    
+
 
     .content-container h2 {
         font-size: 30px; /* Reduces heading size */
