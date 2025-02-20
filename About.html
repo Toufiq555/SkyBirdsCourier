@@ -348,8 +348,6 @@
 
 
 
-
-    
 // ✅ Toggle the main menu
 function toggleDropdownsmall() {
     var dropdownContent = document.querySelector('.small-navbar-content');
@@ -427,7 +425,7 @@ document.querySelector('.small-navbar-content').addEventListener('click', functi
 });
 
 // ✅ Restore menu state on page load
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
     var menu = document.querySelector('.small-navbar-content');
     var servicesDropdown = document.querySelector('.small-dropdown-content');
     var submenuContents = document.querySelectorAll('.small-submenu-content');
@@ -449,9 +447,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-       
-
-
 
 </script>
 
