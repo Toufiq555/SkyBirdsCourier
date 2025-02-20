@@ -454,7 +454,7 @@ body {
   }
     /* Makes sure the leave message is on top of the map */
   
-  h3{
+    .leave-message-container h3{
     font-weight: bold;
     font-size: large;
     text-align: center;
@@ -615,6 +615,8 @@ textarea{
 
   
 
+
+
 /* Footer Section */
 .footer {
   background-color: #333; /* Dark background */
@@ -642,7 +644,7 @@ textarea{
 
 /* Column Headers */
 .footer-column h3 {
- text-align: justify;
+ 
   font-size: 1.25rem;
   color: #fff;
   margin-bottom: 10px;
@@ -729,9 +731,7 @@ textarea{
   .footer-column .social-icons a {
       font-size: 1.2rem;
   }
-}
-
- 
+} 
 
 /* Mobile Menu Button */
 ul {

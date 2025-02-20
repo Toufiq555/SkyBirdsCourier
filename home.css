@@ -295,8 +295,10 @@ body {
 
 /* Section 1 Styling */
 .section-1 {
+    transform: scale(0.6);
+    margin-top: -110px;
     position: relative; /* Allows positioning of child elements */
-    height: 550px; /* Sets the height of this section */
+    height: 570px; /* Sets the height of this section */
     display: flex; /* Uses Flexbox layout to center the content inside */
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
@@ -340,6 +342,7 @@ body {
 }
 
 .image {
+
     width: 100%; /* Makes the image fill the entire slide */
     height: 90%; /* Makes the image fill the entire slide */
     object-fit: cover; /* Ensures the image covers the entire slide without distortion */
@@ -531,6 +534,7 @@ body {
   
 /* Our Services Section */
 .our-services-section2 {
+    margin-top: -105px;
     text-align: center;
     background:white;
     padding: 20px;
